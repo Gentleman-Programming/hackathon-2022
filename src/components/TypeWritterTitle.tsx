@@ -14,5 +14,5 @@ export const TypeWritterTitle = styled.span`
   border-right: 3px solid #EB118A;
   width: ${(props: Props) => props.characters}ch;
   font-size: ${(props: Props) => props.fontSize};
-  line-height: ${(props: Props) => props.lineHeight || props.fontSize};
+  line-height: ${(props: Props) => props.lineHeight || ''};
 `;
