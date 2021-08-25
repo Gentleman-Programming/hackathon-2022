@@ -63,7 +63,7 @@ export default function Hackathon() {
       <MainContainer>
         <HackathonTitleContainer>{title}</HackathonTitleContainer>
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={free.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={free.length}>
             {free}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -75,7 +75,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={when.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={when.length}>
             {when}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -87,7 +87,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={what.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={what.length}>
             {what}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -99,7 +99,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={how.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={how.length}>
             {how}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -111,7 +111,7 @@ export default function Hackathon() {
           </span>
         </HackathonParagraph>
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={tech.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={tech.length}>
             {tech}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -124,7 +124,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={more.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={more.length}>
             {more}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -136,7 +136,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" characters={where.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={where.length}>
             {where}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
