@@ -51,16 +51,29 @@ const HackathonButton = styled.a`
 export default function Hackathon() {
   useEffect(() => {});
   const title = "Hackathon Gentleman Programming 2021";
-  const when = `¿Cúando será ?`;
-  const what = `¿Qué se trata de atacar ?`;
-  const how = `¿Cómo se atacará ?`;
-  const tech = `¿Qué tecnologías ?`;
-  const more = `¿Qué extras se darán ?`;
-  const where = `¿Dónde se realizará ?`;
+  const when = `¿ Cúando será ?`;
+  const free = `¿ Es gratis ?`;
+  const what = `¿ Qué se trata de atacar ?`;
+  const how = `¿ Cómo se atacará ?`;
+  const tech = `¿ Qué tecnologías ?`;
+  const more = `¿ Qué extras se darán ?`;
+  const where = `¿ Dónde se realizará ?`;
   return (
     <>
       <MainContainer>
         <HackathonTitleContainer>{title}</HackathonTitleContainer>
+        <HackathonSubTitleContainer>
+          <TypeWritterTitle fontSize="1rem" characters={free.length}>
+            {free}
+          </TypeWritterTitle>
+        </HackathonSubTitleContainer>
+        <HackathonParagraph>
+          <span>
+            SI! es totalmente gratuito, no te vamos a pedir ningún tipo de dinero ni antes, ni durante, ni después. La idea es que aprendas
+            y disfrutes de la experiencia sin ningún tipo de compromiso.
+          </span>
+        </HackathonParagraph>
+
         <HackathonSubTitleContainer>
           <TypeWritterTitle fontSize="1rem" characters={when.length}>
             {when}
