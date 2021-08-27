@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const HackathonTitleContainer = styled.div`
   margin: 4rem auto;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   font-size: 2rem;
 `;
 
@@ -62,6 +62,7 @@ export default function Hackathon() {
     <>
       <MainContainer>
         <HackathonTitleContainer>{title}</HackathonTitleContainer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FSWacrUjsHM" title="YouTube video player" frameBorder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <HackathonSubTitleContainer>
           <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={free.length}>
             {free}
