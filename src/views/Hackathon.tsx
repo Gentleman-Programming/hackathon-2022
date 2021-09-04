@@ -48,6 +48,17 @@ const HackathonButton = styled.a`
   }
 `;
 
+const HackathonVideoContainer = styled.div`
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+`;
+
 export default function Hackathon() {
   useEffect(() => {});
   const title = "Hackathon Gentleman Programming 2021";
@@ -62,7 +73,17 @@ export default function Hackathon() {
     <>
       <MainContainer>
         <HackathonTitleContainer>{title}</HackathonTitleContainer>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FSWacrUjsHM" title="YouTube video player" frameBorder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <HackathonVideoContainer>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/FSWacrUjsHM"
+            title="YouTube video player"
+            frameBorder="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </HackathonVideoContainer>
         <HackathonSubTitleContainer>
           <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={free.length}>
             {free}
@@ -94,8 +115,8 @@ export default function Hackathon() {
         </HackathonSubTitleContainer>
         <HackathonParagraph>
           <span>
-            La idea del evento es la de satisfacer una problemática social, y una que nos toca bastante, que es la de satisfacer una grieta
-            que hemos encontrado a la hora de encontrar boot camps para poder comenzar la carrera profesional.
+            La idea del evento es la de satisfacer una problemática social, y una que nos toca bastante, que es la de acercar una grieta que
+            hemos encontrado a la hora de realizar boot camps para poder comenzar la carrera profesional.
           </span>
         </HackathonParagraph>
 
@@ -106,7 +127,7 @@ export default function Hackathon() {
         </HackathonSubTitleContainer>
         <HackathonParagraph>
           <span>
-            Esto de realizaría mediante la creación de una app web en la cual tanto y a empresa como un desarrollador pueden crear sus
+            Esto de realizaría mediante la creación de una app web en la cual tanto una empresa como un desarrollador pueden crear sus
             perfiles, la primera puede aportar publicaciones sobre próximos boot camps que estén ofreciendo y los segundos podrán aplicar a
             los mismos enviando información previamente cargada en su perfil (currículum, LinkedIn, etc).
           </span>

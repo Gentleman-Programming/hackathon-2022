@@ -27,15 +27,12 @@ const WelcomeLogo = styled.img`
 `;
 
 const WelcomeLogoName = styled.p`
-  position: absolute;
-  top: 22vw;
-  left: 30vw;
+  margin-top: 35px;
+  margin-bottom: 35px;
   span {
     font-size: 3vw !important;
   }
   @media only screen and ${device.sm} {
-    top: 32vw;
-    left: 12vw;
     span {
       font-size: 6vw !important;
     }
