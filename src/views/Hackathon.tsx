@@ -127,7 +127,7 @@ export default function Hackathon() {
         </HackathonSubTitleContainer>
         <HackathonParagraph>
           <span>
-            Esto de realizaría mediante la creación de una app web en la cual tanto una empresa como un desarrollador pueden crear sus
+            Esto se realizaría mediante la creación de una app web en la cual tanto una empresa como un desarrollador pueden crear sus
             perfiles, la primera puede aportar publicaciones sobre próximos boot camps que estén ofreciendo y los segundos podrán aplicar a
             los mismos enviando información previamente cargada en su perfil (currículum, LinkedIn, etc).
           </span>
