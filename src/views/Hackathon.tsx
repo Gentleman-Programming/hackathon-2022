@@ -85,7 +85,7 @@ export default function Hackathon() {
           ></iframe>
         </HackathonVideoContainer>
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={free.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={free.length} color="default">
             {free}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -97,7 +97,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={when.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={when.length} color="default">
             {when}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -109,7 +109,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={what.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={what.length} color="default">
             {what}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -121,7 +121,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={how.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={how.length} color="default">
             {how}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -133,7 +133,7 @@ export default function Hackathon() {
           </span>
         </HackathonParagraph>
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={tech.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={tech.length} color="default">
             {tech}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -146,7 +146,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={more.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={more.length} color="default">
             {more}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -158,7 +158,7 @@ export default function Hackathon() {
         </HackathonParagraph>
 
         <HackathonSubTitleContainer>
-          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={where.length}>
+          <TypeWritterTitle fontSize="1rem" lineHeight="2rem" characters={where.length} color="default">
             {where}
           </TypeWritterTitle>
         </HackathonSubTitleContainer>
@@ -168,10 +168,7 @@ export default function Hackathon() {
             transcurso de dos días
           </span>
         </HackathonParagraph>
-
-        <HackathonButton href="https://forms.gle/G8iJb3ho3HhVm4rx6" target="_blank" rel="noreferrer">
-          Inscribite !!
-        </HackathonButton>
+        
       </MainContainer>
     </>
   );

@@ -6,6 +6,8 @@ import ParticipateImg from "assets/img/participate.png";
 import { MainContainer, TypeWritterTitle, CountdownTimer } from "components";
 import { device } from "models";
 import { useEffect } from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const NavBar = styled.nav`
@@ -196,10 +198,13 @@ export default function Landing() {
 	const what = `¿ QUÉ ES ?`;
 	const fromYou = `¿ QUÉ ESPERAMOS DE TI ?`;
 	const participate = `¿ CÓMO PARTICIPAR ?`;
-	const guests = `CONOCE A NUESTROS INVITADOS`
+	const guests = `CONOCE A NUESTROS INVITADOS`;
+	const [navigate, setNavigate] = useState(false);
+  const history = useHistory();
 
 	return (
 		<>
+		<div className={navigate ? "fadeOutLeft" : ""}>
 		<NavBar>
 			<div className="logo">
 				<a href="/">
@@ -238,7 +243,7 @@ export default function Landing() {
 		</HackathonTimerContainer>
 		<MainContainer>
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={what.length-1}>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={what.length-1} color='default'>
 					{what}
 				</TypeWritterTitle>
 			</HackathonTitleContainer>
@@ -250,7 +255,7 @@ export default function Landing() {
 			</SectionContainer>
 
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={fromYou.length-1}>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={fromYou.length-1} color='default'>
 					{fromYou}
 				</TypeWritterTitle>
 			</HackathonTitleContainer>
@@ -262,7 +267,7 @@ export default function Landing() {
 			</SectionContainer>
 
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={participate.length-1}>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={participate.length-1} color='default'>
 					{participate}
 				</TypeWritterTitle>
 			</HackathonTitleContainer>
@@ -273,17 +278,24 @@ export default function Landing() {
 					<span>PÚBLICA:</span> Durante las semanas previas tendremos charlas de las figuras más importantes y sobre los temas más interesantes, de forma GRATUITA !! serán realizadas durante streams en <a href="https://www.twitch.tv/gentleman_programming" target="_blank" rel="noopener noreferrer">Twitch</a> y luego subidos a <a href="https://www.youtube.com/c/GentlemanProgramming" target="_blank" rel="noopener noreferrer">YouTube</a> <br /><br /> 
 					<span>PRIVADA:</span> El Hackathon de Gentleman Programming año 2022 descripto anteriormente !
 					<SecondaryButton>
+					onClick={() => {
+						setNavigate(true);
+						setTimeout(() => {
+							history.push(`/ricknmorty-challenge`);
+						}, 1000);
+					}}
 						¿Cómo participar?
 					</SecondaryButton>
 				</HackathonParagraph>
 			</SectionContainer>
 
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={guests.length}>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={guests.length} color='default'>
 					{guests}
 				</TypeWritterTitle>
 			</HackathonTitleContainer> 
 		</MainContainer>
+		</div>
 		</>
 	);
 }
