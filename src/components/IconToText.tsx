@@ -22,7 +22,7 @@ export function IconToText(props: any) {
   return (
     <IconToTextContainer>
       <IconToTextButton>{props.icon}</IconToTextButton>
-      <TypeWritterTitle className="hidden-text" fontSize="16px" characters={props.text.length}>
+      <TypeWritterTitle className="hidden-text" fontSize="16px" characters={props.text.length} color="default">
         {props.text}
       </TypeWritterTitle>
     </IconToTextContainer>

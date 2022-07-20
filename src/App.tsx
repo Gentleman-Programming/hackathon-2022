@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.scss";
 const Welcome = lazy(() => import("views/Welcome"));
 const Hackathon = lazy(() => import("views/Hackathon"));
+const RickNMorty = lazy(() => import("views/RickNMorty"));
 
 const viewStyles = {
   mainContainer: {
@@ -20,6 +21,11 @@ function App() {
             <Route exact path="/hackathon">
               <div style={viewStyles.mainContainer} className="fadeInRight">
                 <Hackathon />
+              </div>
+            </Route>
+            <Route exact path="/ricknmorty-challenge">
+              <div style={viewStyles.mainContainer} className="fadeInRight">
+                <RickNMorty />
               </div>
             </Route>
           </Switch>
