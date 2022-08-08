@@ -2,7 +2,8 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.scss";
 const Welcome = lazy(() => import("views/Welcome"));
-const Hackathon = lazy(() => import("views/Hackathon"));
+//const Hackathon = lazy(() => import("views/Hackathon"));
+const Landing = lazy(() => import("views/HackathonLanding"));
 
 const viewStyles = {
   mainContainer: {
@@ -19,7 +20,7 @@ function App() {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/hackathon">
               <div style={viewStyles.mainContainer} className="fadeInRight">
-                <Hackathon />
+                <Landing />
               </div>
             </Route>
           </Switch>
