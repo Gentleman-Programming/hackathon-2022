@@ -1,52 +1,23 @@
-import Logo from "assets/img/mustache-icon.svg";
 import Mustache from "assets/img/mustache-logo.svg";
 import WhatImg from "assets/img/what.png";
 import FromYouImg from "assets/img/fromYou.png";
 import ParticipateImg from "assets/img/participate.png";
-import { MainContainer, TypeWritterTitle, CountdownTimer } from "components";
+import { MainContainer, TypeWritterTitle, Navbar, CountdownTimer, Slider } from "components";
+// import { Slider } from "components/Slider/Slider";
 import { device } from "models";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-const NavBar = styled.nav`
-	display: flex;
-	align-items: center;
-	justify-content:space-between;
-	padding: 1.75rem 1rem;
-	.links {
-		.normalLink {
-			font-family: 'Lato';
-			color: #F5F0F2;
-			margin-right: 1rem;
-			cursor: pointer;
-			&:hover {
-				color: #eb1889;
-			}
-			&.register {
-				margin-right: 1rem;
-				color: #e731ed;
-				.oval {
-					position: absolute;
-					top: 0.75rem;
-					right: 1.2rem;
-					width: 5.5rem;
-					height: 3.5rem;
-					border: 2px solid #e731ed;
-					border-radius: 50%;
-					transform: rotate(-17deg);
-				}
-			}
-		}
-	}
-`;
+
 
 const Circle = styled.div`
 	width: 44.5rem;
 	height: 44.5rem;
 	border-radius: 50%;
 	border: 3px solid #f3569c;
+	z-index: -1;
 	&.first {
 		position: absolute;
 		top: -17rem;
@@ -205,23 +176,7 @@ export default function Landing() {
 	return (
 		<>
 		<div className={navigate ? "fadeOutLeft" : ""}>
-		<NavBar>
-			<div className="logo">
-				<a href="/">
-					<img src={Logo} alt="Hackathon Gentleman Programming 2022" />
-				</a>
-			</div>
-			<div className="links">
-				<a className="normalLink" href="http://" target="_blank" rel="noopener noreferrer">Inicio</a>
-				<a className="normalLink" href="http://" target="_blank" rel="noopener noreferrer">Qué es</a>
-				<a className="normalLink" href="http://" target="_blank" rel="noopener noreferrer">Invitados</a>
-				<a className="normalLink" href="http://" target="_blank" rel="noopener noreferrer">Fechas importantes</a>
-				<a className="normalLink register" href="http://" target="_blank" rel="noopener noreferrer">
-					Inscribete
-					<div className="oval"></div>
-				</a>
-			</div>
-		</NavBar>
+		<Navbar />
 		<Circle className="first"/>
 		<MainContainer>
 			<img src={Mustache} alt="Hackathon Gentleman Programming 2022" />
@@ -238,12 +193,12 @@ export default function Landing() {
 		<Circle className="second"/>
 		<HackathonTimerContainer>
 			<p className="heading1">INCRÍBETE EN EL HACKATHON</p>
-				<CountdownTimer></CountdownTimer>
+				<CountdownTimer countdownDate="2022/09/02"/>
 			<PrimaryButton href="/">Quiero formar parte del hackathon 2022</PrimaryButton>
 		</HackathonTimerContainer>
 		<MainContainer>
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={what.length-1} color='default'>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={what.length} color='default'>
 					{what}
 				</TypeWritterTitle>
 			</HackathonTitleContainer>
@@ -255,7 +210,7 @@ export default function Landing() {
 			</SectionContainer>
 
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={fromYou.length-1} color='default'>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={fromYou.length} color='default'>
 					{fromYou}
 				</TypeWritterTitle>
 			</HackathonTitleContainer>
@@ -267,7 +222,7 @@ export default function Landing() {
 			</SectionContainer>
 
 			<HackathonTitleContainer>
-				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={participate.length-1} color='default'>
+				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={participate.length} color='default'>
 					{participate}
 				</TypeWritterTitle>
 			</HackathonTitleContainer>
@@ -293,7 +248,8 @@ export default function Landing() {
 				<TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={guests.length} color='default'>
 					{guests}
 				</TypeWritterTitle>
-			</HackathonTitleContainer> 
+			</HackathonTitleContainer>
+			<Slider />
 		</MainContainer>
 		</div>
 		</>
