@@ -1,4 +1,4 @@
-import Logo from "assets/img/mustache-icon.svg";
+import Logo from 'assets/img/mustache-icon.svg';
 
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -23,7 +23,7 @@ const NavbarContainer = styled.div`
     right: 0;
     margin: 0 auto;
     text-align: center;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &.active {
       width: 100%;
       display: block;
@@ -94,7 +94,7 @@ const BackgroundDiv = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
   &.active {
     border-radius: 0 0 80% 0;
     top: 0;
@@ -112,30 +112,33 @@ export function Navbar() {
   return (
     <>
       <NavbarContainer>
-      <div className="logo">
-				<a href="/">
-					<img src={Logo} alt="Hackathon Gentleman Programming 2022" />
-				</a>
-			</div>
+        <div className="logo">
+          <a href="/">
+            <img src={Logo} alt="Hackathon Gentleman Programming 2022" />
+          </a>
+        </div>
         <div className={`links ${clicked ? 'active' : ''}`}>
-        <a href="http://" target="_blank" rel="noopener noreferrer">Inicio</a>
-				<a href="http://" target="_blank" rel="noopener noreferrer">Qué es</a>
-				<a href="http://" target="_blank" rel="noopener noreferrer">Invitados</a>
-				<a href="http://" target="_blank" rel="noopener noreferrer">Fechas importantes</a>
-				<a href="http://" target="_blank" rel="noopener noreferrer">
-					Inscribete
-					<div className="oval"></div>
-				</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            Inicio
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            Qué es
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            Invitados
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            Fechas importantes
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            Inscribete
+            <div className="oval"></div>
+          </a>
         </div>
         <div className="burgerButton">
-          <BurgerButton
-            clicked={clicked}
-            handleClick={handleClick}
-          ></BurgerButton>
+          <BurgerButton clicked={clicked} handleClick={handleClick}></BurgerButton>
         </div>
-        <BackgroundDiv
-          className={`initial ${clicked ? 'active' : ''}`}
-        ></BackgroundDiv>
+        <BackgroundDiv className={`initial ${clicked ? 'active' : ''}`}></BackgroundDiv>
       </NavbarContainer>
     </>
   );

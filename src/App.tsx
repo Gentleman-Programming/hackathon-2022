@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.scss";
 const Welcome = lazy(() => import("views/Welcome"));
-//const Hackathon = lazy(() => import("views/Hackathon"));
 const Landing = lazy(() => import("views/HackathonLanding"));
 const RickNMorty = lazy(() => import("views/RickNMorty"));
 
