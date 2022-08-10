@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import FromYouImg from 'assets/img/fromYou.png';
 import Mustache from 'assets/img/mustache-logo.svg';
 import ParticipateImg from 'assets/img/participate.png';
@@ -5,8 +7,6 @@ import WhatImg from 'assets/img/what.png';
 import { CountdownTimer, CustomSlider, MainContainer, Navbar, TypeWritterTitle } from 'components';
 // import { Slider } from "components/Slider/Slider";
 import { device } from 'models';
-import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Circle = styled.div`
@@ -115,7 +115,7 @@ const PrimaryButton = styled.a`
   margin: 2rem auto;
 `;
 
-const SecondaryButton = styled.a`
+const SecondaryButton = styled.span`
   width: max-content;
   padding: 0.5rem 0.75rem;
   display: flex;
@@ -127,7 +127,9 @@ const SecondaryButton = styled.a`
   border-radius: 0.25rem;
   color: #e731ed;
   box-sizing: border-box;
-  margin: 2rem auto;
+  margin: 4rem auto;
+  font-family: 'Lato';
+  font-size: clamp(1rem, calc(1rem + 2vw), 30px);
 `;
 
 const HackathonTitleContainer = styled.div`
@@ -165,7 +167,6 @@ export default function Landing() {
   const participate = `¿ CÓMO PARTICIPAR ?`;
   const guests = `CONOCE A NUESTROS INVITADOS`;
   const [navigate, setNavigate] = useState(false);
-  const history = useHistory();
 
   return (
     <>
@@ -239,34 +240,32 @@ export default function Landing() {
               {participate}
             </TypeWritterTitle>
           </HackathonTitleContainer>
-          <SectionContainer>
-            <img src={ParticipateImg} alt="Hackathon Gentleman Programming 2022" />
-            <HackathonParagraph>
-              El evento tendrá dos partes, una pública y una privada: <br /> <br />
-              <span>PÚBLICA:</span> Durante las semanas previas tendremos charlas de las figuras más importantes y sobre los temas más
-              interesantes, de forma GRATUITA !! serán realizadas durante streams en{' '}
-              <a href="https://www.twitch.tv/gentleman_programming" target="_blank" rel="noopener noreferrer">
-                Twitch
-              </a>{' '}
-              y luego subidos a{' '}
-              <a href="https://www.youtube.com/c/GentlemanProgramming" target="_blank" rel="noopener noreferrer">
-                YouTube
-              </a>{' '}
-              <br />
-              <br />
-              <span>PRIVADA:</span> El Hackathon de Gentleman Programming año 2022 descripto anteriormente !
-              <SecondaryButton
-                onClick={() => {
-                  setNavigate(true);
-                  setTimeout(() => {
-                    history.push(`/ricknmorty-challenge`);
-                  }, 1000);
-                }}
-              >
+
+          <div>
+            <SectionContainer>
+              <img src={ParticipateImg} alt="Hackathon Gentleman Programming 2022" />
+              <HackathonParagraph>
+                El evento tendrá dos partes, una pública y una privada: <br /> <br />
+                <span>PÚBLICA:</span> Durante las semanas previas tendremos charlas de las figuras más importantes y sobre los temas más
+                interesantes, de forma GRATUITA !! serán realizadas durante streams en{' '}
+                <a href="https://www.twitch.tv/gentleman_programming" target="_blank" rel="noopener noreferrer">
+                  Twitch
+                </a>{' '}
+                y luego subidos a{' '}
+                <a href="https://www.youtube.com/c/GentlemanProgramming" target="_blank" rel="noopener noreferrer">
+                  YouTube
+                </a>{' '}
+                <br />
+                <br />
+                <span>PRIVADA:</span> El Hackathon de Gentleman Programming año 2022 descripto anteriormente !
+              </HackathonParagraph>
+            </SectionContainer>
+            <Link to='/ricknmorty-challenge'>
+              <SecondaryButton onClick={() => setNavigate(true)}>
                 ¿Cómo participar?
               </SecondaryButton>
-            </HackathonParagraph>
-          </SectionContainer>
+            </Link>
+          </div>
 
           <HackathonTitleContainer>
             <TypeWritterTitle fontSize="2.25rem" lineHeight="2.6rem" characters={guests.length} color="default">
