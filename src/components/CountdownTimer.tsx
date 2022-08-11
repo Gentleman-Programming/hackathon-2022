@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const defaultTime = {
   days: 0,
   hours: 0,
   minutes: 0,
-  seconds: 0,
+  seconds: 0
 };
 
-const Timer = styled.ul`
+const Timer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   .timerItem {
-    display: inline-block;
     font-size: 12.5rem;
-    list-style-type: none;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     .info {
       display: block;
@@ -23,7 +24,7 @@ const Timer = styled.ul`
   }
 `;
 
-export function CountdownTimer( props: any ) {
+export function CountdownTimer(props: any) {
   const [time, setTime] = useState(defaultTime);
 
   useEffect(() => {
@@ -50,25 +51,25 @@ export function CountdownTimer( props: any ) {
       days: days,
       hours: hours,
       minutes: minutes,
-      seconds: seconds,
+      seconds: seconds
     });
   };
 
   return (
     <>
       <Timer>
-        <li className="timerItem">
+        <div className="timerItem">
           {time.days} <span className="info">Días</span>
-        </li>
-        <li className="timerItem">
+        </div>
+        <div className="timerItem">
           {time.hours} <span className="info">Horas</span>
-        </li>
-        <li className="timerItem">
+        </div>
+        <div className="timerItem">
           {time.minutes} <span className="info">Minutos</span>
-        </li>
-        <li className="timerItem">
+        </div>
+        <div className="timerItem">
           {time.seconds} <span className="info">Segundos</span>
-        </li>
+        </div>
       </Timer>
     </>
   );
