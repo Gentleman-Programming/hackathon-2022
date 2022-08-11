@@ -93,17 +93,6 @@ export const HackathonTimerContainer = styled.div`
   backdrop-filter: blur(0.75rem);
 `;
 
-export const PrimaryButton = styled.button`
-  padding: 0.5rem 0.75rem;
-  background-color: #eb1889;
-  border: 0;
-  box-shadow: 0px 0px 8px rgba(231, 49, 237, 0.5);
-  border-radius: 0.25rem;
-  color: #f5f0f2;
-  box-sizing: border-box;
-  margin: 2rem;
-`;
-
 export const SecondaryButton = styled.a`
   width: max-content;
   padding: 0.5rem 0.75rem;
