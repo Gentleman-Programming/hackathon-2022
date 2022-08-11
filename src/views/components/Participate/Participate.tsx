@@ -1,7 +1,7 @@
 import ParticipateImg from 'assets/img/participate.png';
 import { IntersectionObserverSection } from 'components';
 import { Routes } from 'models/route';
-import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import { HackathonParagraph, HackathonTitleContainer, SecondaryButton, SectionContainer } from 'views/styled-components';
 
 interface Props {
@@ -10,7 +10,6 @@ interface Props {
 
 function Participate({ setTheNavigation }: Props) {
   const participate = `¿ CÓMO PARTICIPAR ?`;
-  const history = useHistory();
 
   return (
     <div id={Routes.PARTICIPATE}>
@@ -32,18 +31,11 @@ function Participate({ setTheNavigation }: Props) {
             <br />
             <br />
             <span>PRIVADA:</span> El Hackathon de Gentleman Programming año 2022 descripto anteriormente !
-            <SecondaryButton
-              onClick={() => {
-                setTheNavigation(true);
-                setTimeout(() => {
-                  history.push(`/ricknmorty-challenge`);
-                }, 1000);
-              }}
-            >
-              ¿Cómo participar?
-            </SecondaryButton>
           </HackathonParagraph>
         </SectionContainer>
+        <Link to="/ricknmorty-challenge">
+          <SecondaryButton onClick={() => setTheNavigation(true)}>¿Cómo participar?</SecondaryButton>
+        </Link>
       </IntersectionObserverSection>
     </div>
   );
