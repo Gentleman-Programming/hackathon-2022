@@ -14,7 +14,8 @@ export function IntersectionObserverSection(props: any) {
         !history.location.hash.includes(props.hash) &&
         thisRef.current &&
         ((thisRef.current.offsetTop - document.body.scrollTop > 0 &&
-          thisRef.current.offsetTop - document.body.scrollTop < document.body.clientHeight / 2) ||
+          thisRef.current.offsetTop - document.body.scrollTop <
+            document.body.clientHeight / 2) ||
           (thisRef.current.offsetTop === 0 && document.body.scrollTop === 0))
       ) {
         changeHash();
@@ -25,6 +26,15 @@ export function IntersectionObserverSection(props: any) {
       document.body.removeEventListener('scroll', handleScroll);
     };
   });
+
+  useEffect(() => {
+    const { hash } = window.location;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) element.scrollIntoView();
+    }
+  }, []);
 
   return <div ref={thisRef}>{props.children}</div>;
 }
