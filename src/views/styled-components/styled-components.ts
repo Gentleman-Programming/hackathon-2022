@@ -14,8 +14,18 @@ export const Circle = styled.div`
   }
   &.second {
     position: absolute;
-    bottom: -7%;
+    top: 3%;
     right: -17%;
+  }
+  &.third {
+    position: absolute;
+    bottom: 17%;
+    right: -17%;
+  }
+  &.fourth {
+    position: absolute;
+    bottom: 3%;
+    left: -7%;
   }
 
   @media only screen and ${device.sm} {
@@ -132,4 +142,26 @@ export const SectionContainer = styled.div`
       width: 80%;
     }
   }
+`;
+
+export const HackathonCalendarContainer = styled.div`
+  width: 100%;
+  padding: 3rem 0;
+  border: 1px solid #e731ed80;
+  background: linear-gradient(264.68deg, rgba(231, 49, 237, 0.25) 0%, rgba(231, 49, 237, 0.05) 99.93%);
+  backdrop-filter: blur(0.75rem);
+  .importantDate {
+    font-family: 'Lato';
+    font-size: calc(1rem + 0.5vw);
+    .date {
+      font-size: calc(1.5rem + 1vw);
+      color: #eb1889;
+    }
+  }
+`;
+
+export const HackathonCalendarIframe = styled.iframe`
+  width:80%;
+  height: 25rem;
+  border: 0;
 `;

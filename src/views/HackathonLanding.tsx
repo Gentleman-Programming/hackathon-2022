@@ -9,6 +9,7 @@ import Participate from './components/Participate';
 import { Timer } from './components/Timer';
 import { What } from './components/What';
 import { Circle } from './styled-components';
+import { Calendar } from './components/Calendar';
 
 export default function Landing() {
   useEffect(() => {});
@@ -32,6 +33,8 @@ export default function Landing() {
           <Participate setTheNavigation={setTheNavigation} />
           <Guests />
         </MainContainer>
+        <Circle className="third" />
+        <Calendar />
       </div>
     </>
   );

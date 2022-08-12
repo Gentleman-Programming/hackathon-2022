@@ -6,5 +6,6 @@ export enum Routes {
   PARTICIPATE = 'participate',
   GUESTS = 'guests',
   INTRODUCTION = 'introduction',
-  TIMER = 'timer'
+  TIMER = 'timer',
+  CALENDAR = 'calendar',
 }
