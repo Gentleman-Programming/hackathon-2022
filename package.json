@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.24",
-    "@types/node": "^16.4.7",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "@types/react-router": "^5.1.16",
@@ -33,6 +32,7 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "@types/node": "^16.11.47",
     "@types/react-slick": "^0.23.10",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.1.0"
