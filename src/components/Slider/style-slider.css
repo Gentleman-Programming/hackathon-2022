@@ -1,0 +1,37 @@
+.slick-next::before,.slick-prev::before{
+    font-size: 3rem;
+    
+    
+}
+.slick-next{
+    margin-right: 2rem;
+}
+
+.slick-prev{
+    margin-left: 0.5rem;
+}
+.img-slide{
+    margin: '0 auto'
+}
+@media (max-width: 900px) {
+    .slick-next,.slick-prev{
+        font-size: 2rem;
+    }
+    .slick-prev{
+        margin-left: 0.20rem;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .img-slide{
+        width: 80%;
+    }
+    .slick-prev{
+        margin-left: 1rem;
+    }
+    .slick-next{
+        margin-right: 2.5rem;
+    }
+    
+}
