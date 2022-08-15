@@ -29,7 +29,7 @@ export function CustomSlider() {
   const settings = {
     lazyLoad: 'ondemand' as any,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     dots: true,
     infinite: true,
     speed: 500,
@@ -49,12 +49,13 @@ export function CustomSlider() {
               <img className="img-slide" style={{ margin: '0 auto' }} src={require(`assets/img/${guest.image}`).default} alt={guest.name} />
               <p className="subtitle1">{guest.name}</p>
               <p className="body1">{guest.links.discord}</p>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               {Object.keys(guest.links).map((key: string) => (
-                <p key={key} className="body1">
-                  <b>{key}: </b>
-                  <a href={guest.links[key]} target='blank'>{guest.links[key]}</a>
-                </p>
+                  <a href={guest.links[key]} target="_blank" rel="noopener noreferrer">
+                    <img style={{ width: '1rem', margin: '0 0.5rem' }} src={require(`assets/img/${key}.svg`).default} alt={key} />
+                  </a>
               ))}
+              </div>
             </div>
           ))}
         </Slider>
