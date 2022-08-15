@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TypeWritterTitle } from "./TypeWritterTitle";
+import { TypeWritterTitle } from 'components/TypeWritterTitle';
+import styled from 'styled-components';
 
 const IconToTextButton = styled.button`
   font-size: 25px;
@@ -18,11 +18,11 @@ const IconToTextContainer = styled.div`
   }
 `;
 
-export function IconToText(props: any) {
+export default function IconToText(props: any) {
   return (
     <IconToTextContainer>
       <IconToTextButton>{props.icon}</IconToTextButton>
-      <TypeWritterTitle className="hidden-text" fontSize="16px" characters={props.text.length} color="default">
+      <TypeWritterTitle className="hidden-text" fontSize="16px" characters={props.text.length}>
         {props.text}
       </TypeWritterTitle>
     </IconToTextContainer>

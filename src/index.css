@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 /**
@@ -354,6 +355,8 @@ html {
   height: 100%;
   font-family: "Fira Mono", monospace;
   font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -490,5 +493,5 @@ code {
 }
 
 .fadeIn {
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
 }

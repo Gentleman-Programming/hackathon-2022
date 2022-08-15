@@ -1,4 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/*Variables*/
+/*Colors*/
+$primary: #eb1889;
+$light: #f5f0f2;
+$accent: #e731ed;
+
+/*Clases*/
+/*Text*/
+.heading1 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 2.25rem;
+  letter-spacing: 0.0025rem;
+}
+
+.heading2 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.heading3 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.8rem;
+  letter-spacing: 0.0015rem;
+}
+
+.heading4 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.0015rem;
+}
+
+.heading5 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.0015rem;
+}
+
+.subtitle1 {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 0.0015rem;
+}
+
+.subtitle2 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: 0.0015rem;
+}
+
+.body1 {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.005rem;
+}
+
+.body2 {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.0025rem;
+}
+
+.caption {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.004rem;
+}
+
+.legal {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.015rem;
+}
+
+.primary {
+  color: $primary;
+}
+
 
 .App {
   text-align: center;

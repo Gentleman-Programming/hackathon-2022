@@ -80,7 +80,7 @@ export default function Welcome() {
       <WelcomeLogoContainer>
         <WelcomeLogo className="heartBeat" src={GentlemanProgrammingLogo} alt="GentlemanProgrammingLogo" />
         <WelcomeLogoName>
-          <TypeWritterTitle fontSize="1rem" characters={titlePink.length + title.length}>
+          <TypeWritterTitle fontSize="1rem" characters={titlePink.length + title.length} color="default">
             <WelcomeLogoPinkName>{titlePink}</WelcomeLogoPinkName>
             {title}
           </TypeWritterTitle>
