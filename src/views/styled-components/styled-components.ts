@@ -103,18 +103,6 @@ export const HackathonTimerContainer = styled.div`
   backdrop-filter: blur(0.75rem);
 `;
 
-export const SecondaryButton = styled.a`
-  width: max-content;
-  padding: 0.5rem 0.75rem;
-  background-color: #f5f0f2;
-  box-shadow: 0px 0px 8px rgba(231, 49, 237, 0.5);
-  border: 1px solid #e731ed;
-  border-radius: 0.25rem;
-  color: #e731ed;
-  box-sizing: border-box;
-  margin: 2rem;
-`;
-
 export const HackathonTitleContainer = styled.div`
   margin: 3rem auto;
   font-family: 'Montserrat';
@@ -161,7 +149,20 @@ export const HackathonCalendarContainer = styled.div`
 `;
 
 export const HackathonCalendarIframe = styled.iframe`
-  width:80%;
+  width: 80%;
   height: 25rem;
   border: 0;
+`;
+
+export const HackathonText = styled.p`
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-size: 3vw;
+  margin-top: 2.5rem;
+
+  @media only screen and ${device.sm} {
+    margin-top: 30px;
+    font-size: 10vw;
+  }
 `;

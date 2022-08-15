@@ -2,7 +2,7 @@ import ParticipateImg from 'assets/img/participate.png';
 import { IntersectionObserverSection } from 'components';
 import { Routes } from 'models/route';
 import { Link } from 'react-router-dom';
-import { HackathonParagraph, HackathonTitleContainer, SecondaryButton, SectionContainer } from 'views/styled-components';
+import { HackathonParagraph, HackathonText, HackathonTitleContainer, SectionContainer } from 'views/styled-components';
 
 interface Props {
   setTheNavigation: (navigation: boolean) => void;
@@ -34,7 +34,7 @@ function Participate({ setTheNavigation }: Props) {
           </HackathonParagraph>
         </SectionContainer>
         <Link to="/ricknmorty-challenge">
-          <SecondaryButton onClick={() => setTheNavigation(true)}>¿Cómo participar?</SecondaryButton>
+          <HackathonText onClick={() => setTheNavigation(true)}>¿Cómo participar?</HackathonText>
         </Link>
       </IntersectionObserverSection>
     </div>

@@ -33,7 +33,7 @@ export function IntersectionObserverSection(props: any) {
       const element = document.getElementById(id);
       setTimeout(() => {
         if (element) element.scrollIntoView({ behavior: 'smooth' });
-      }, 1000);
+      }, 1500);
     }
   }, []);
 
