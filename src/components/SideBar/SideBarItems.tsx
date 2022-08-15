@@ -54,7 +54,12 @@ export default function SideBarItems(props: Props) {
       hash: Routes.GUESTS,
       text: 'Invitados especiales',
       icon: 'IP'
-    }
+    },
+    {
+      hash: Routes.CALENDAR,
+      text: 'Fechas importantes',
+      icon: 'FI'
+    },
   ];
 
   return (
