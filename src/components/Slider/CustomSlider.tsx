@@ -9,12 +9,12 @@ interface Guest {
   image: string;
   name: string;
   links: {
-    twitter: string;
-    youtube: string;
-    instagram: string;
-    discord: string;
+    twitter?: string;
+    youtube?: string;
+    instagram?: string;
+    discord?: string;
+    linkedin?: string;
   };
-  description: string;
 }
 
 const SliderContainer = styled.div`
@@ -34,25 +34,22 @@ export function CustomSlider() {
     slidesToScroll: 1
   };
   const styled = {
-    width: '90vw',
-
+    width: '90vw'
   };
 
   return (
     <div style={styled}>
       <SliderContainer>
-      <Slider {...settings}>
-        {guestsInfo.map((guest: Guest) => (
-          <div key={guest.id}>
-            
-            <img className='img-slide' style={{ margin: '0 auto'}} src={require(`assets/img/${guest.image}`).default} alt={guest.name} />
-            <p className="subtitle1">{guest.name}</p>
-            <p className="body1">{guest.links.discord}</p>
-          </div>
-        ))}
-      </Slider>
-    </SliderContainer>
+        <Slider {...settings}>
+          {guestsInfo.map((guest: Guest) => (
+            <div key={guest.id}>
+              <img className="img-slide" style={{ margin: '0 auto' }} src={require(`assets/img/${guest.image}`).default} alt={guest.name} />
+              <p className="subtitle1">{guest.name}</p>
+              <p className="body1">{guest.links.discord}</p>
+            </div>
+          ))}
+        </Slider>
+      </SliderContainer>
     </div>
-    
   );
 }
