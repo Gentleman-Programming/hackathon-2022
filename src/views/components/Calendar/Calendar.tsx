@@ -18,7 +18,7 @@ export default function Calendar() {
             <span className="date">01 Oct.</span> Límite para entregar Rick and Morty Challenge
           </p>
           <p className="importantDate">
-            <span className="date">28 - 29 Oct.</span> Hackathon 2022
+            <span className="date">29 - 30 Oct.</span> Hackathon 2022
           </p>
         </HackathonCalendarContainer>
       </IntersectionObserverSection>

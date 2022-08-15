@@ -4,17 +4,20 @@ import 'slick-carousel/slick/slick.css';
 import styled from 'styled-components';
 import { guestsInfo } from './SliderData';
 import './style-slider.css';
+
+interface Links {
+  [key: string]: string | undefined;
+  twitter?: string;
+  youtube?: string;
+  instagram?: string;
+  discord?: string;
+  linkedin?: string;
+}
 interface Guest {
   id: number;
   image: string;
   name: string;
-  links: {
-    twitter?: string;
-    youtube?: string;
-    instagram?: string;
-    discord?: string;
-    linkedin?: string;
-  };
+  links: Links;
 }
 
 const SliderContainer = styled.div`
@@ -46,6 +49,12 @@ export function CustomSlider() {
               <img className="img-slide" style={{ margin: '0 auto' }} src={require(`assets/img/${guest.image}`).default} alt={guest.name} />
               <p className="subtitle1">{guest.name}</p>
               <p className="body1">{guest.links.discord}</p>
+              {Object.keys(guest.links).map((key: string) => (
+                <p key={key} className="body1">
+                  <b>{key}: </b>
+                  <a href={guest.links[key]} target='blank'>{guest.links[key]}</a>
+                </p>
+              ))}
             </div>
           ))}
         </Slider>
