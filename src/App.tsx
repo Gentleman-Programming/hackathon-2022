@@ -7,7 +7,7 @@ const RickNMorty = lazy(() => import("views/RickNMorty"));
 
 const viewStyles = {
   mainContainer: {
-    width: "100%",
+    width: "100%"
   },
 };
 

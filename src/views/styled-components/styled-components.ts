@@ -19,12 +19,12 @@ export const Circle = styled.div`
   }
   &.third {
     position: absolute;
-    bottom: 17%;
+    bottom: 13%;
     right: -17%;
   }
   &.fourth {
     position: absolute;
-    bottom: 3%;
+    bottom: -2%;
     left: -7%;
   }
 
@@ -134,15 +134,16 @@ export const SectionContainer = styled.div`
 
 export const HackathonCalendarContainer = styled.div`
   width: 100%;
-  padding: 3rem 0;
+  box-sizing: border-box;
+  padding: 3rem 0.5rem;
   border: 1px solid #e731ed80;
   background: linear-gradient(264.68deg, rgba(231, 49, 237, 0.25) 0%, rgba(231, 49, 237, 0.05) 99.93%);
   backdrop-filter: blur(0.75rem);
   .importantDate {
     font-family: 'Lato';
-    font-size: calc(1rem + 0.5vw);
+    font-size: calc(1rem + 0.25vw);
     .date {
-      font-size: calc(1.5rem + 1vw);
+      font-size: calc(1.5rem + 0.25vw);
       color: #eb1889;
     }
   }
@@ -165,4 +166,17 @@ export const HackathonText = styled.p`
     margin-top: 30px;
     font-size: 10vw;
   }
+`;
+
+export const HackathonFooter = styled.div`
+  width: 100%;
+  background-color: #E731ED4D;
+  background: rgba(231, 49, 237, 0.3);
+  backdrop-filter: blur(12px);
+  font-size: calc(0.75rem + 0.5vw);
+  font-family: 'Lato';
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  margin-top: 6.25rem;
+  box-sizing: border-box;
 `;

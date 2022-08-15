@@ -3,6 +3,7 @@ import SideBar from 'components/SideBar/SideBar';
 // import { Slider } from "components/Slider/Slider";
 import { useState } from 'react';
 import { Calendar } from './components/Calendar';
+import { Footer } from './components/Footer';
 import FromYou from './components/FromYou';
 import Guests from './components/Guests';
 import Introduction from './components/Introduction';
@@ -20,7 +21,7 @@ export default function Landing() {
 
   return (
     <>
-      <div style={{ position: 'relative', display: 'flex', flexFlow: 'column wrap' }} className={navigate ? 'fadeOutLeft' : ''}>
+      <div style={{ position: 'relative', display: 'flex', flexFlow: 'column wrap', overflow: 'hidden' }} className={navigate ? 'fadeOutLeft' : ''}>
         <SideBar />
         <Circle className="first" />
         <Introduction />
@@ -34,6 +35,8 @@ export default function Landing() {
         </MainContainer>
         <Circle className="third" />
         <Calendar />
+        <Circle className="fourth" />
+        <Footer />
       </div>
     </>
   );
