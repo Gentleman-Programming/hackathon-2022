@@ -8,7 +8,7 @@ function Timer() {
       <IntersectionObserverSection hash={Routes.TIMER}>
         <HackathonTimerContainer>
           <p className="heading1">INCRÍBETE EN EL HACKATHON</p>
-          <CountdownTimer countdownDate="2022/10/22" />
+          <CountdownTimer countdownDate="2022/10/1" />
         </HackathonTimerContainer>
       </IntersectionObserverSection>
     </div>
