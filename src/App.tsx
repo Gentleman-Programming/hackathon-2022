@@ -13,18 +13,18 @@ const viewStyles = {
 
 function App() {
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<></>}>
       <BrowserRouter>
-        <div className="App">
+        <div className="App fadeInRight">
           <Switch>
             <Route exact path="/" component={Welcome} />
             <Route exact path="/hackathon">
-              <div style={viewStyles.mainContainer} className="fadeInRight">
+              <div style={viewStyles.mainContainer}>
                 <Landing />
               </div>
             </Route>
             <Route exact path="/ricknmorty-challenge">
-              <div style={viewStyles.mainContainer} className="fadeInRight">
+              <div style={viewStyles.mainContainer}>
                 <RickNMorty />
               </div>
             </Route>

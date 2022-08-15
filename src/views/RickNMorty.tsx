@@ -280,7 +280,7 @@ export default function RickNMorty() {
           </RnMParagraphSection>
 
           <RnMSubTitleContainer>
-            <HackathonText>Límite de entrega 2 de Septiembre</HackathonText>
+            <HackathonText>Límite de entrega 1 de Octubre</HackathonText>
           </RnMSubTitleContainer>
 
           <RnMSubTitleContainer>{start}</RnMSubTitleContainer>

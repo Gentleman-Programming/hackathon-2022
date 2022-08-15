@@ -14,8 +14,7 @@ export function IntersectionObserverSection(props: any) {
         !history.location.hash.includes(props.hash) &&
         thisRef.current &&
         ((thisRef.current.offsetTop - document.body.scrollTop > 0 &&
-          thisRef.current.offsetTop - document.body.scrollTop <
-            document.body.clientHeight / 2) ||
+          thisRef.current.offsetTop - document.body.scrollTop < document.body.clientHeight / 3) ||
           (thisRef.current.offsetTop === 0 && document.body.scrollTop === 0))
       ) {
         changeHash();
@@ -32,7 +31,9 @@ export function IntersectionObserverSection(props: any) {
     if (hash) {
       const id = hash.replace('#', '');
       const element = document.getElementById(id);
-      if (element) element.scrollIntoView();
+      setTimeout(() => {
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 1000);
     }
   }, []);
 
