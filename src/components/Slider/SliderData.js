@@ -17,7 +17,6 @@ export const guestsInfo = [
     name: 'Annelis Fuenmayor',
     links: {
       twitter: 'https://twitter.com/annesiaf',
-      youtube: 'https://www.youtube.com/channel/UCECAgq0Dh4837_sT6YNWFQw',
       instagram: 'https://www.instagram.com/annesiaf/',
       linkedin: 'https://www.linkedin.com/in/annelisfuenmayor/'
     }

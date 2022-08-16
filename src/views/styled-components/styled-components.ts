@@ -170,7 +170,7 @@ export const HackathonText = styled.p`
 
 export const HackathonFooter = styled.div`
   width: 100%;
-  background-color: #E731ED4D;
+  background-color: #e731ed4d;
   background: rgba(231, 49, 237, 0.3);
   backdrop-filter: blur(12px);
   font-size: calc(0.75rem + 0.5vw);
@@ -179,4 +179,15 @@ export const HackathonFooter = styled.div`
   padding: 1.5rem 0.5rem;
   margin-top: 6.25rem;
   box-sizing: border-box;
+`;
+
+export const RnMLink = styled.a`
+  color: #00c853;
+  cursor: pointer;
+`;
+
+export const Img = styled.img`
+  max-width: 450px;
+  height: auto;
+  margin: 1rem;
 `;

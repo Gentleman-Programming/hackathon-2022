@@ -8,7 +8,7 @@ import { device } from 'models';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { HackathonText } from './styled-components';
+import { HackathonText, RnMLink } from './styled-components';
 
 const RnMTitleContainer = styled.div`
   display: flex;
@@ -26,11 +26,6 @@ const RnMSubTitleContainer = styled.div`
   line-height: clamp(3rem, calc(1rem + 2vw), 30px);
 `;
 
-const RnMLink = styled.a`
-  color: #00c853;
-  cursor: pointer;
-`;
-
 const RnMParagraphSection = styled.div`
   position: relative;
   width: 100%;
@@ -38,7 +33,7 @@ const RnMParagraphSection = styled.div`
   border: solid 1px #4caf50;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-  text-align: justify;
+  text-align: left;
   line-height: clamp(3rem, calc(1rem + 2vw), 30px);
   font-size: clamp(1rem, calc(1rem + 2vw), 30px);
   box-shadow: 0.25rem 0.25rem 2rem #00c853;
@@ -158,7 +153,7 @@ export default function RickNMorty() {
               <img className="floatin-head-img" src={RnMFloatingHead} alt="Rick and Morty Challenge" />
             </RnMParagraphImgContainer>
             Crear una aplicación con la API de{' '}
-            <RnMLink href=" https://rickandmortyapi.com/" target="_blank" rel="noreferrer">
+            <RnMLink href="https://rickandmortyapi.com/" target="_blank" rel="noreferrer">
               Rick and Morty
             </RnMLink>{' '}
             (no te preocupes es totalmente gratuita), esta aplicación será sin ningún tipo de reglas. <br />
@@ -204,7 +199,7 @@ export default function RickNMorty() {
                 (ambas gratuitas).
               </li>
               <li>
-                Se entregará de forma privada por email a{' '}
+                Se entregará de forma privada y en singular por email a{' '}
                 <RnMLink href="mailto:gentlemanprogramming@gmail.com" target="_blank" rel="noreferrer">
                   gentlemanprogramming@gmail.com
                 </RnMLink>
