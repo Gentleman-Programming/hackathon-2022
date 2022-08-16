@@ -1,37 +1,52 @@
-.slick-next::before,.slick-prev::before{
-    font-size: 3rem;
-    
-    
+.slick-next::before,
+.slick-prev::before {
+  font-size: 3rem;
 }
-.slick-next{
-    margin-right: 2rem;
+.slick-next {
+  margin-right: 2rem;
 }
 
-.slick-prev{
-    margin-left: 0.5rem;
+.slick-prev {
+  margin-left: 0.5rem;
 }
-.img-slide{
-    margin: '0 auto'
+.img-slide {
+  margin: "0 auto";
 }
+
 @media (max-width: 900px) {
-    .slick-next,.slick-prev{
-        font-size: 2rem;
-    }
-    .slick-prev{
-        margin-left: 0.20rem;
-    }
-    
+  .slick-next,
+  .slick-prev {
+    font-size: 2rem;
+  }
+  .slick-prev {
+    margin-left: 0.2rem;
+  }
 }
 
 @media (max-width: 500px) {
-    .img-slide{
-        width: 80%;
-    }
-    .slick-prev{
-        margin-left: 1rem;
-    }
-    .slick-next{
-        margin-right: 2.5rem;
-    }
-    
+  .img-slide {
+    width: 80%;
+  }
+  .slick-prev {
+    margin-left: 1rem;
+  }
+  .slick-next {
+    margin-right: 2.5rem;
+  }
+}
+
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.iconMedia {
+  width: 1.6rem;
+}
+
+.iconMedia:hover {
+  transform: scale(1.5);
+  transition: transform 300ms ease-in-out;
 }
