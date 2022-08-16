@@ -34,7 +34,7 @@ function Participate({ setTheNavigation }: Props) {
           </HackathonParagraph>
         </SectionContainer>
         <Link to="/ricknmorty-challenge">
-          <HackathonText onClick={() => setTheNavigation(true)}>¿Cómo participar?</HackathonText>
+          <HackathonText onClick={() => setTheNavigation(true)}>Click aquí para participar!</HackathonText>
         </Link>
       </IntersectionObserverSection>
     </div>
