@@ -18,6 +18,7 @@ interface Guest {
   image: string;
   name: string;
   links: Links;
+  iconMedia: Links;
 }
 
 const SliderContainer = styled.div`
@@ -29,7 +30,7 @@ export function CustomSlider() {
   const settings = {
     lazyLoad: 'ondemand' as any,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2200,
     dots: true,
     infinite: true,
     speed: 500,
@@ -48,13 +49,15 @@ export function CustomSlider() {
             <div key={guest.id}>
               <img className="img-slide" style={{ margin: '0 auto' }} src={require(`assets/img/${guest.image}`).default} alt={guest.name} />
               <p className="subtitle1">{guest.name}</p>
-              <p className="body1">{guest.links.discord}</p>
-              {Object.keys(guest.links).map((key: string) => (
-                <p key={key} className="body1">
-                  <b>{key}: </b>
-                  <a href={guest.links[key]} target='blank'>{guest.links[key]}</a>
-                </p>
-              ))}
+              <div className="socialContainer">
+                {Object.keys(guest.links).map((key: string) => (
+                  <p key={key} className="body1">
+                    <a href={guest.links[key]} target="blank">
+                      <img className="iconMedia" src={guest.iconMedia[key]} alt="" />
+                    </a>
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
         </Slider>
