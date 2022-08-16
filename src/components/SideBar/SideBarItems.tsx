@@ -32,22 +32,37 @@ export default function SideBarItems(props: Props) {
     },
     {
       hash: Routes.TIMER,
-      text: 'Cúando ?',
+      text: '¿Cúando ?',
       icon: 'C'
     },
     {
       hash: Routes.WHAT,
-      text: 'Qué es ?',
+      text: '¿Qué es ?',
       icon: 'Q'
     },
     {
+      hash: Routes.LIVE,
+      text: '¿Cómo se hará?',
+      icon: 'L'
+    },
+    {
+      hash: Routes.HOURS,
+      text: 'Fecha Inicial',
+      icon: 'FI'
+    },
+    {
+      hash: Routes.TECHNOLOGIES,
+      text: 'Tecnologías',
+      icon: 'T'
+    },
+    {
       hash: Routes.FROMYOU,
-      text: 'Qué se espera de ti ?',
+      text: '¿Qué se espera de ti ?',
       icon: 'QT'
     },
     {
       hash: Routes.PARTICIPATE,
-      text: 'Cómo participar ?',
+      text: '¿Cómo participar ?',
       icon: 'CP'
     },
     {
@@ -59,7 +74,7 @@ export default function SideBarItems(props: Props) {
       hash: Routes.CALENDAR,
       text: 'Fechas importantes',
       icon: 'FI'
-    },
+    }
   ];
 
   return (
@@ -71,11 +86,7 @@ export default function SideBarItems(props: Props) {
             if (props.clicked) props.clicked(false);
           }}
         >
-          <NavHashLink
-            activeClassName="active"
-            to={`/hackathon#${item.hash}`}
-            isActive={() => isActive(item.hash)}
-          >
+          <NavHashLink activeClassName="active" to={`/hackathon#${item.hash}`} isActive={() => isActive(item.hash)}>
             <IconToText text={item.text} icon={item.icon}></IconToText>
           </NavHashLink>
         </Li>

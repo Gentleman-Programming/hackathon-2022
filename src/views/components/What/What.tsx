@@ -32,6 +32,8 @@ function What() {
             </HackathonParagraph>
           </div>
         </SectionContainer>
+      </IntersectionObserverSection>
+      <IntersectionObserverSection hash={Routes.LIVE}>
         <HackathonTitleContainer>{live}</HackathonTitleContainer>
         <SectionContainer>
           <HackathonParagraph>
@@ -40,35 +42,39 @@ function What() {
               Discord
             </a>{' '}
             de una manera que no creerás, la pasarás increible !
-            <p>
-              Siéntete un profesional haciendo las mejores prácticas de trabajo remoto para poder aprender de los mejores. De esta manera
-              podrás trabajar con personas de muchos sitios diferentes pero el projecto avanzará.
-            </p>
-            <p>
-              El mentor a cargo dispondrá de tareas y de apoyo en la coordinación del trabajo y los horarios, de manera que puedas estar con
-              tu equipo la mayor parte del tiempo.
-            </p>
+            <br />
+            Siéntete un profesional haciendo las mejores prácticas de trabajo remoto para poder aprender de los mejores. De esta manera
+            podrás trabajar con personas de muchos sitios diferentes pero el projecto avanzará.
+            <br />
+            El mentor a cargo dispondrá de tareas y de apoyo en la coordinación del trabajo y los horarios, de manera que puedas estar con
+            tu equipo la mayor parte del tiempo.
           </HackathonParagraph>
           <Img src={Discord} alt="Hackathon Gentleman Programming 2022" />
         </SectionContainer>
+      </IntersectionObserverSection>
+      <IntersectionObserverSection hash={Routes.HOURS}>
         <HackathonTitleContainer>{hours}</HackathonTitleContainer>
         <SectionContainer>
           <img style={{ maxWidth: '450px' }} src={Mustachy} alt="Hackathon Gentleman Programming 2022" />
           <HackathonParagraph>
-            <p>Durante los días sabado y domingo 29 - 30 Oct.</p>
-            <p>
-              Y como mucha gente tendrá horarios totalmente diferentes, vamos a hacerlo de la manera más facil... con metodologías ágiles !
-            </p>
+            Durante los días sabado y domingo 29 - 30 Oct.
+            <br />Y como mucha gente tendrá horarios totalmente diferentes, vamos a hacerlo de la manera más facil... con metodologías
+            ágiles !
           </HackathonParagraph>
         </SectionContainer>
-        <HackathonTitleContainer>{technologies}</HackathonTitleContainer>
-        <SectionContainer>
-          <HackathonParagraph>
-            <p>Se podrá utilizar cualquier tipo de tecnología siempre y cuando sea Web y en Javascript !</p>
-            <p>Si tienes alguna duda, el mentor dará una mano para elegir cuál iría mejor según la composición del equipo.</p>
-          </HackathonParagraph>
-          <Img src={Es6} alt="Hackathon Gentleman Programming 2022" />
-        </SectionContainer>
+      </IntersectionObserverSection>
+
+      <IntersectionObserverSection hash={Routes.TECHNOLOGIES}>
+
+      <HackathonTitleContainer>{technologies}</HackathonTitleContainer>
+      <SectionContainer>
+        <HackathonParagraph>
+          Se podrá utilizar cualquier tipo de tecnología siempre y cuando sea Web y en Javascript !
+          <br />
+          Si tienes alguna duda, el mentor dará una mano para elegir cuál iría mejor según la composición del equipo.
+        </HackathonParagraph>
+        <Img src={Es6} alt="Hackathon Gentleman Programming 2022" />
+      </SectionContainer>
       </IntersectionObserverSection>
     </div>
   );

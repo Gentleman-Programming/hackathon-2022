@@ -8,4 +8,7 @@ export enum Routes {
   INTRODUCTION = 'introduction',
   TIMER = 'timer',
   CALENDAR = 'calendar',
+  LIVE = 'live',
+  HOURS = 'hours',
+  TECHNOLOGIES = 'technologies',	
 }
