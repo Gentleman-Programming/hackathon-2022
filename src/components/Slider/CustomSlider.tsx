@@ -1,9 +1,9 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import styled from 'styled-components';
-import { guestsInfo } from './SliderData';
-import './style-slider.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import styled from "styled-components";
+import { guestsInfo } from "./SliderData";
+import "./style-slider.css";
 
 interface Links {
   [key: string]: string | undefined;
@@ -18,6 +18,7 @@ interface Guest {
   image: string;
   name: string;
   links: Links;
+  iconMedia: Links;
 }
 
 const SliderContainer = styled.div`
@@ -27,17 +28,17 @@ const SliderContainer = styled.div`
 
 export function CustomSlider() {
   const settings = {
-    lazyLoad: 'ondemand' as any,
+    lazyLoad: "ondemand" as any,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2200,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
   const styled = {
-    width: '90vw'
+    width: "90vw",
   };
 
   return (
@@ -46,15 +47,26 @@ export function CustomSlider() {
         <Slider {...settings}>
           {guestsInfo.map((guest: Guest) => (
             <div key={guest.id}>
-              <img className="img-slide" style={{ margin: '0 auto' }} src={require(`assets/img/${guest.image}`).default} alt={guest.name} />
+              <img
+                className="img-slide"
+                style={{ margin: "0 auto" }}
+                src={require(`assets/img/${guest.image}`).default}
+                alt={guest.name}
+              />
               <p className="subtitle1">{guest.name}</p>
-              <p className="body1">{guest.links.discord}</p>
-              {Object.keys(guest.links).map((key: string) => (
-                <p key={key} className="body1">
-                  <b>{key}: </b>
-                  <a href={guest.links[key]} target='blank'>{guest.links[key]}</a>
-                </p>
-              ))}
+              <div className="socialContainer">
+                {Object.keys(guest.links).map((key: string) => (
+                  <p key={key} className="body1">
+                    <a href={guest.links[key]} target="blank">
+                      <img
+                        className="iconMedia"
+                        src={guest.iconMedia[key]}
+                        alt=""
+                      />
+                    </a>
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
         </Slider>
