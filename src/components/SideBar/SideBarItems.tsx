@@ -32,12 +32,12 @@ export default function SideBarItems(props: Props) {
     },
     {
       hash: Routes.TIMER,
-      text: '¿Cúando ?',
+      text: '¿Cúando?',
       icon: 'C'
     },
     {
       hash: Routes.WHAT,
-      text: '¿Qué es ?',
+      text: '¿Qué es?',
       icon: 'Q'
     },
     {
@@ -57,12 +57,12 @@ export default function SideBarItems(props: Props) {
     },
     {
       hash: Routes.FROMYOU,
-      text: '¿Qué se espera de ti ?',
-      icon: 'QT'
+      text: '¿Qué se espera de ti?',
+     icon: 'QT'
     },
     {
       hash: Routes.PARTICIPATE,
-      text: '¿Cómo participar ?',
+      text: '¿Cómo participar?',
       icon: 'CP'
     },
     {

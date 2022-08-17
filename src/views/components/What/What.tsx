@@ -7,7 +7,7 @@ import { Routes } from 'models/route';
 import { HackathonParagraph, HackathonTitleContainer, Img, SectionContainer } from 'views/styled-components';
 
 function What() {
-  const what = `¿ QUÉ ES ?`;
+  const what = `¿QUÉ ES?`;
   const live = `¿Cómo se hará?`;
   const hours = `¿Cúando se hará?`;
   const technologies = `¿Qué tecnologías?`;

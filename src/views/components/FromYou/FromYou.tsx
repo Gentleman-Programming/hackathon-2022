@@ -4,7 +4,7 @@ import { Routes } from 'models/route';
 import { HackathonParagraph, HackathonTitleContainer, SectionContainer } from 'views/styled-components';
 
 function FromYou() {
-  const fromYou = `¿ QUÉ ESPERAMOS DE TI ?`;
+  const fromYou = `¿QUÉ ESPERAMOS DE TI?`;
   return (
     <div id={Routes.FROMYOU}>
       <IntersectionObserverSection hash={Routes.FROMYOU}>
