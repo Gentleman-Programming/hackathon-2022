@@ -184,6 +184,8 @@ export const HackathonFooter = styled.div`
 export const RnMLink = styled.a`
   color: #00c853;
   cursor: pointer;
+  position: relative;
+  z-index: 999;
 `;
 
 export const Img = styled.img`

@@ -123,8 +123,6 @@ const BackButton = styled.button`
   box-shadow: 0.25rem 0.25rem 2rem #00c853;
   z-index: 10;
   a {
-    position: relative;
-    z-index: 999;
     color: white;
   }
 `;
