@@ -146,6 +146,23 @@ export const guestsInfo = [
   },
   {
     id: 8,
+    image: "Albyn.png",
+    name: "Alby Hernandez",
+    links: {
+      twitter: "https://twitter.com/achetronic",
+      youtube: "https://www.youtube.com/achetronic",
+      twitch: "https://www.twitch.tv/achetronic",
+      linkedin: "https://www.linkedin.com/in/achetronic/",
+    },
+    iconMedia: {
+      twitter: twitter,
+      youtube: youtube,
+      twitch: twitch,
+      linkedin: linkedin,
+    },
+  },
+  /* {
+    id: 8,
     image: "Jhony.png",
     name: "Jhonny Barrios",
     links: {
@@ -160,5 +177,5 @@ export const guestsInfo = [
       instagram: instagram,
       linkedin: linkedin,
     },
-  },
+  }, */
 ];
