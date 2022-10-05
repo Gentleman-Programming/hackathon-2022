@@ -147,7 +147,7 @@ export const guestsInfo = [
   {
     id: 8,
     image: "Albyn.png",
-    name: "Alby Hernandez",
+    name: "Alby Hernández",
     links: {
       twitter: "https://twitter.com/achetronic",
       youtube: "https://www.youtube.com/achetronic",
