@@ -161,21 +161,23 @@ export const guestsInfo = [
       linkedin: linkedin,
     },
   },
-  /* {
-    id: 8,
+   {
+    id: 9,
     image: "Jhony.png",
     name: "Jhonny Barrios",
     links: {
+      discord: "https://discord.gg/8uA9EjRYEn",
       twitter: "https://twitter.com/dev626",
       youtube: "https://www.youtube.com/channel/UCFH0w8ta8hrNiGKpZyJjzhw",
       instagram: "https://www.instagram.com/codesocietydev/",
       linkedin: "https://www.linkedin.com/in/dev626/",
     },
     iconMedia: {
+      discord: discord,
       twitter: twitter,
       youtube: youtube,
       instagram: instagram,
       linkedin: linkedin,
     },
-  }, */
+  },
 ];
