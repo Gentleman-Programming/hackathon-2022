@@ -37,9 +37,9 @@ export function CountdownTimer(props: any) {
 
   const updateTime = (countdownTime: number) => {
     const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
+      minute = (second * 60)*-1,
+      hour = (minute * 60)*-1,
+      day = (hour * 24)*-1;
     let now = new Date().getTime(),
       distance = countdownTime - now;
     const days = Math.floor(distance / day),
